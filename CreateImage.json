@@ -1,0 +1,19 @@
+
+{
+
+    "Args": ["./executable"],
+    "Mounts": {
+        "%1": "/mount/01"
+        },
+
+    "BaseVolumeSz": "4096m",
+
+    "CloudConfig" :{
+        "Platform" :"aws",
+        "ProjectID" :"<Project ID>",
+		"Zone" : "<REGION NAME>",
+        "flavor":"t3a.medium",
+		"BucketName":"<S3 Bucket>"
+	}
+
+}

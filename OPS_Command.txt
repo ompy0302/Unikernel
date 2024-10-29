@@ -1,0 +1,7 @@
+ops image create -c <config file> -i <AMI Name> -t aws <elf>
+
+ops instance create -c <config file> -i <Instance Name> <AMI name> -t aws
+
+# Make sure QEMU is installed.
+sudo apt-get install qemu-kvm
+sudo apt-get install qemu-system-x86

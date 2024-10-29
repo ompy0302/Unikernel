@@ -1,0 +1,14 @@
+
+{
+		"CloudConfig" :{
+        "Platform" :"aws",
+        "ProjectID" :"<Project ID>",
+		"Zone" : "<Region ID>",
+		"VPC": "<VPC ID>",
+        "Subnet":"<Subnet ID>",
+        "flavor":"t3a.medium",
+
+		}
+
+
+}

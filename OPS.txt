@@ -1,0 +1,19 @@
+# Command to clone the source code
+git clone https://github.com/nanovms/ops.git
+
+# Installs dependencies for ops
+make deps       
+
+# Generates protobuf files.
+make generate    
+
+# Build the ops tool, which generates Ops binary.
+make build
+
+# Copy Ops binary
+cp ops ~/.ops/bin/ops 
+
+# Update the path
+export PATH=$PATH:/home/ubuntu/.ops/bin
+
+go build

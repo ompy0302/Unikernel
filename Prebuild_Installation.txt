@@ -1,0 +1,33 @@
+# Remove older version of go.
+sudo apt-get remove golang-go
+sudo apt-get remove --auto-remove golang-go
+sudo apt-get update
+sudo rm -rf /usr/local/go
+
+# Download the latest go version (above 1.22.1)
+wget https://go.dev/dl/go1.22.1.linux-amd64.tar.gz
+
+# Unzip the downloaded tar file
+sudo tar -C /usr/local -xzf ~/<Your download folder path>/go*.linux-amd64.tar.gz
+
+# Set the path
+export PATH=$PATH:/usr/local/go/bin
+
+# Before we install GCC, update the packet list
+sudo apt-get update
+
+# Install GCC
+sudo apt-get install gcc
+
+# Verify the GCC Installation
+gcc --version
+
+# Install make
+sudo apt-get install make
+
+# Below path should be present in the Linux machine path.
+export PATH=$PATH:/usr/local/go/bin
+
+# Make sure QEMU is installed.
+sudo apt-get install qemu-kvm
+sudo apt-get install qemu-system-x86

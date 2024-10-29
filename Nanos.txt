@@ -1,0 +1,11 @@
+# Clone Nanos code.
+git clone https://github.com/nanovms/nanos.git    
+
+# Build nanos code.
+make
+
+# Copy the post build files.
+cp output/platform/pc/boot/boot.img ~/.ops/0.1.xx/. 
+cp output/platform/pc/bin/kernel.img ~/.ops/0.1.xx/.
+cp output/tools/bin/mkfs ~/.ops/0.1.xx/.
+cp -r output/klib/bin/* ~/.ops/0.1.xx/klibs/.
